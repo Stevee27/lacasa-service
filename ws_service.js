@@ -4,12 +4,12 @@
 
 import WebSocket, {WebSocketServer} from 'ws';
 
-import MongoClient from "mongodb";
+import {MongoClient} from "mongodb";
 import EventEmitter from "events";
 
 import dotenv from 'dotenv'
-const ENV_CONFIG = dotenv.config({path: '../.env'}).parsed;
-const DB_CONFIG = dotenv.config({path: '../.envdb'}).parsed;
+const ENV_CONFIG = dotenv.config({path: './.env'}).parsed;
+const DB_CONFIG = dotenv.config({path: './.envdb'}).parsed;
 
 const emitter = new EventEmitter();
 let db;

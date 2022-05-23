@@ -1,8 +1,8 @@
 
-import MongoClient from "mongodb";
+import {MongoClient} from "mongodb";
 
 import dotenv from 'dotenv'
-const DB_CONFIG = dotenv.config({path: '../.envdb'}).parsed;
+const DB_CONFIG = dotenv.config({path: './.envdb'}).parsed;
 
 import StoreHours from "./dao/store-hours.js";
 

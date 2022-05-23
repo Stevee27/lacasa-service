@@ -1,0 +1,4 @@
+LIVING_URL=mongodb://localhost:27017/living
+LIVING_ADM_URL=mongodb://localhost:27017/living
+LACASA_ADM_URL=mongodb://localhost:27017
+LACASA_URL=mongodb://localhost:27017

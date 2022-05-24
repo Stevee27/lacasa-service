@@ -1,3 +1,12 @@
+const MenuType = Object.freeze({
+    SANDWICH:   'sandwich',
+    BEVERAGE:   'beverage',
+    BREAKFAST:  'breakfast',
+    PIZZA:      'pizza',
+    SALAD:      'salad',
+    PASTRY:     'pastry',
+})
+
 class MenuItemModel {
 
     constructor(options) {
@@ -10,4 +19,4 @@ class MenuItemModel {
     }
 }
 
-export default MenuItemModel
+export {MenuItemModel, MenuType}

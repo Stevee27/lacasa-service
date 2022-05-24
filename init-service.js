@@ -64,13 +64,13 @@ const runApp = () => {
                     to: 1400,
                 }),
             ]
-            db.collection('store_hours').insertMany(storeHoursArray)
-                .then( res => {
-                    console.log(res.ops)
-                })
-                .catch(err => {
-                    console.error(err)
-                })
+            // db.collection('store_hours').insertMany(storeHoursArray)
+            //     .then( res => {
+            //         console.log(res.ops)
+            //     })
+            //     .catch(err => {
+            //         console.error(err)
+            //     })
                 
         const menuItemArray = [
             new MenuItemModel({
@@ -217,13 +217,221 @@ const runApp = () => {
                 smallPrice: '',
                 price: '2.99'
             }),
-            
-
+            new MenuItemModel({
+                numeral: 28,name: 'Sandwich', menutype: 'BREAKFAST', description: 'Egg, Ham, Provolone on Toasted Roll or Croissant', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 29, name: 'Maddalena Special', menutype: 'BREAKFAST',
+                description: '2 Over Easy Eggs, Avocado, Basil, Mozzarella & Tomato on Choice of Bread', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 30, name: 'Eggs', menutype: 'BREAKFAST', description: '2 Eggs on Toast with Fruit', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 31, name: 'Veggie Omelet', menutype: 'BREAKFAST',
+                description: '3 Eggs with Eggplant, Zucchini, Roasted Peppers & Mozzarella', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 32, name: 'Ham and Cheese', menutype: 'BREAKFAST', description: '3 Eggs with Ham & Provolone', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 33, name: 'Cheese', menutype: 'BREAKFAST', description: '3 Eggs with Provolone', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({numeral: 34, name: 'Egg White Omelet', menutype: 'BREAKFAST', description: 'Arugula, Tomato & Mozzarella', smallPrice: '', price: '9.99'}),
+            new MenuItemModel({
+                numeral: 101,
+                name: 'La Originale',
+                menutype: 'PIZZA',
+                desciption: 'Tomato Sauce, Mozzarella Cheese',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 102,
+                name: 'Caprese',
+                menutype: 'PIZZA',
+                desciption: 'Fresh Tomato, Mozzarella, Basil',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 103,
+                name: 'L\'Insalata di Pizza',
+                menutype: 'PIZZA',
+                desciption: 'Fresh Tomato, Mozzarella, Basil',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 104,
+                name: 'La Diavola',
+                menutype: 'PIZZA',
+                desciption: 'Tomato Sauce, Mozzarella Cheese, Pepperoni',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 105,
+                name: ' La Salizz',
+                menutype: 'PIZZA',
+                desciption: 'Italian Sausage, Mozzarella, Tomato Sauce',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 106,
+                name: 'Vegetarian',
+                menutype: 'PIZZA',
+                desciption: 'Mozzarella, Olives, Green Pepper, Mushroom, Artichoke',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 107,
+                name: 'Anna Special',
+                menutype: 'PIZZA',
+                desciption: 'Turkey',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 108,
+                name: 'Pizza Alla Nutella',
+                menutype: 'PIZZA',
+                desciption: 'Turkey',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 109,
+                name: 'Altamura',
+                menutype: 'PIZZA',
+                desciption: 'TuBresaola, Arugula, Mozzarella Cheese, Shaved Parigiano Cheese, Cherry Tomatorkey',
+                smallPrice: '9.99',
+                price: '10.99'
+            }),
+            new MenuItemModel({
+                numeral: 401,
+                name: 'Antipasto Salad',
+                menutype: 'SALAD',
+                desciption: 'Mixed Lettuce with Grilled Eggplant, Zucchini, Artichoke, Roasted Peppers, Sun Dried Tomatoes and Mozzarella topped with Olive Oil and Balsamic Glaze',
+                smallPrice: '11.99',
+                price: '15.99'
+            }),
+            new MenuItemModel({
+                numeral: 402,
+                name: 'Italian Sushi',
+                menutype: 'SALAD',
+                desciption: 'Turkey, Artichoke, Zucchini,Eggplant, Fresh Tomato, Basil, Provolone or Fresh Mozzarella Rolled on a Bed of Mixed Lettuce',
+                smallPrice: '11.99',
+                price: '15.99'
+            }),
+            new MenuItemModel({
+                numeral: 403,
+                name: 'Caprese Salad',
+                menutype: 'SALAD',
+                desciption: 'TuBrFresh Tomato and Mozzarella topped with Fresh Basil, Olive Oil, and Balsamic Glazeesaola',
+                smallPrice: '9.99',
+                price: '13.99'
+            }),
+            new MenuItemModel({
+                numeral: 404,
+                name: 'Bresalo (Cured Beef) Salad',
+                menutype: 'SALAD',
+                desciption: 'Bresalo over Arugula topped with Shaved Parmigiano Cheese, Lemon, black Pepper and Olive Oil',
+                smallPrice: '',
+                price: '15.99'
+            }),
+            new MenuItemModel({
+                numeral: 501,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Chocolate Croissant',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 502,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Strawberry & Cream Cheese Croissant',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 503,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Cream Cheese Croissant',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 504,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Plain Croissant',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 505,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Creama Croissant',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 506,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Muffins',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 507,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Sfogliatella (Ricotta & Citrus Fruit)',
+                smallPrice: '3.25',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 508,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Lobster Tail with Custard & Cream',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 509,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Cannoli with Ricotta & Chocolate Chip',
+                smallPrice: '3.25',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 510,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Chocolate Chip Cookie',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 511,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Cinnamon Bun',
+                smallPrice: '',
+                price: '4.00'
+            }),
+            new MenuItemModel({
+                numeral: 512,
+                name: '',
+                menutype: 'PASTRY',
+                desciption: 'Danish',
+                smallPrice: '',
+                price: '4.00'
+            }),
         ]
 
         db.collection('menu_items').insertMany(menuItemArray)
         .then( res => {
-            console.log(res.ops)
+            console.log('menu_items success')
         })
         .catch(err => {
             console.error(err)

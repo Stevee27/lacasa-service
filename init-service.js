@@ -6,6 +6,7 @@ const DB_CONFIG = dotenv.config({path: './.envdb'}).parsed;
 
 import StoreHours from "./dao/store-hours.js";
 import {MenuItemModel,MenuType} from "./dao/menu-item-model.js";
+import OptionModel from "./dao/option-model.js";
 
 let db;
 
@@ -475,6 +476,35 @@ const runApp = () => {
         .catch(err => {
             console.error(err)
         })
+
+        const initialOptionsList = [
+            new OptionModel({name: 'Lettuce', menuType: MenuType.SANDWICH, sortOrder: 1}),
+            new OptionModel({name: 'Tomato', menuType: MenuType.SANDWICH, sortOrder: 2}),
+            new OptionModel({name: 'Oil', menuType: MenuType.SANDWICH, sortOrder: 3}),
+            new OptionModel({name: 'Vinegar', menuType: MenuType.SANDWICH, sortOrder: 4}),
+            new OptionModel({name: 'Arugula', menuType: MenuType.SANDWICH, sortOrder: 5}),
+            new OptionModel({name: 'Roasted Pepper', menuType: MenuType.SANDWICH, sortOrder: 6}),
+            new OptionModel({name: 'Extra Mozzarella', menuType: MenuType.SANDWICH, sortOrder: 10, price: '2.75'}),
+            new OptionModel({name: 'Fruitcup', menuType: MenuType.SANDWICH, sortOrder: 11, price: '4.95'}),
+            new OptionModel({name: 'Avocado', menuType: MenuType.SANDWICH, sortOrder: 12, price: '2.25'}),
+            new OptionModel({name: 'Heated', menuType: MenuType.SANDWICH, sortOrder: 22}),
+            new OptionModel({name: 'Iced', menuType: MenuType.BEVERAGE, sortOrder: 1}),
+            new OptionModel({name: 'Add Flavor', menuType: MenuType.BEVERAGE, sortOrder: 2}),
+            new OptionModel({name: 'Almond Milk', menuType: MenuType.BEVERAGE, sortOrder: 20}),
+            new OptionModel({name: 'Soy Milk', menuType: MenuType.BEVERAGE, sortOrder: 21}),
+            new OptionModel({name: 'Coconut Milk', menuType: MenuType.BEVERAGE, sortOrder: 22}),
+            new OptionModel({name: 'No Meat', menuType: MenuType.BREAKFAST, sortOrder: 1}),
+            new OptionModel({name: 'No Cheese', menuType: MenuType.BREAKFAST, sortOrder: 2}),
+            new OptionModel({name: 'No Eggs', menuType: MenuType.BREAKFAST, sortOrder: 3}),
+          ];
+
+          db.collection('options').insertMany(initialOptionsList)
+          .then( res => {
+              console.log('options success')
+          })
+          .catch(err => {
+              console.error(err)
+          })
 
         })
         .catch(err => {

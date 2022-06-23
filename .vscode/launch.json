@@ -5,13 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "init service",
-            "program": "${workspaceFolder}/init-service.js",
+            "type": "node",
             "request": "launch",
+            "name": "load mongo",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/mongo-load.js",
+            "restart": true,
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "pwa-node"
         },
         {
             "name": "Socket Service",

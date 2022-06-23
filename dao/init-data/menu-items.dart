@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import '../menu-item-model.js';
-import '../menu-type.js';
+// import '../menu-type.js';
 
 List<MenuItemModel> initialMenuModelArray = [
   // MenuItemModel(1, '', MenuType.SANDWICH, 'Prosciutto, Fresh Mozzarella', '10.99', '11.99'),

@@ -1,11 +1,18 @@
 import mongoose from 'mongoose';
 
 const OptionSchema = new mongoose.Schema({
-    numeral: Number,
-    name: String,
-    menutype: String,
-    desciption: String,
-    smallPrice: String,
+    name: {
+        type: String,
+        required: true
+    },
+    menuType: {
+        type: String,
+        required: true
+    },
+    sortOrder: {
+        type: Number,
+        required: true
+    },
     price: String,
 })
 

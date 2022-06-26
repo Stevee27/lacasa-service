@@ -9,7 +9,9 @@ const app = express()
 // import EventEmitter from 'events';
 // const emitter = new EventEmitter();
 
-import StoreHours from './models/storehours.js'
+import StoreHours from './models/storehours.js';
+import MenuItem from './models/menu-item.js'
+import Option from './models/option.js'
 
 const main = async () => {
 
@@ -32,8 +34,26 @@ const getWeeklySchedule = async (res) => {
     res.send(hours);
 }
 
+const getMenu = async (res) => {
+    const menu = await MenuItem.find();
+    res.send(menu);
+}
+
+const getOptions = async (res) => {
+    const options = await Option.find();
+    res.send(options);
+}
+
 api.get('/hours', (req, res) => {
     getWeeklySchedule(res)
+})
+
+api.get('/menu', (req, res) => {
+    getMenu(res)
+})
+
+api.get('/options', (req, res) => {
+    getOptions(res)
 })
 
 main()

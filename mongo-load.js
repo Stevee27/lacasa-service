@@ -4,20 +4,24 @@ import dotenv from 'dotenv'
 // import { Int32 } from 'mongodb';
 const DB_CONFIG = dotenv.config({ path: './.envdb' }).parsed;
 
+import StoreHours from './models/storehours.js';
+import MenuItem from './models/menu-item.js';
+import Option from './models/option.js';
+
 const main = async () => {
     await mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
     console.log('Mongoose connected (db lacasa)');
 
-    const storeHoursSchema = new mongoose.Schema({
-        order: Number,
-        day: String,
-        from: Number,
-        to: Number,
-    });
+    // const storeHoursSchema = new mongoose.Schema({
+    //     order: Number,
+    //     day: String,
+    //     from: Number,
+    //     to: Number,
+    // });
 
-    const StoreHours = mongoose.model('StoreHours', storeHoursSchema);
+    // const StoreHours = mongoose.model('StoreHours', storeHoursSchema);
 
-    if (await StoreHours.count().exec() > 0) {
+    if (await StoreHours.estimatedDocumentCount().exec() > 0) {
         console.log('DATABASE ALREADY EXISTS');
         return;
     }
@@ -85,16 +89,16 @@ const main = async () => {
         PASTRY: 'pastry',
     })
 
-    const menuItemSchema = new mongoose.Schema({
-        numeral: Number,
-        name: String,
-        menutype: String,
-        desciption: String,
-        smallPrice: String,
-        price: String,
-    });
+    // const menuItemSchema = new mongoose.Schema({
+    //     numeral: Number,
+    //     name: String,
+    //     menutype: String,
+    //     desciption: String,
+    //     smallPrice: String,
+    //     price: String,
+    // });
 
-    const MenuItem = mongoose.model('MenuItem', menuItemSchema);
+    // const MenuItem = mongoose.model('MenuItem', menuItemSchema);
 
     const menuItemArray = [
         new MenuItem({
@@ -508,16 +512,16 @@ const main = async () => {
         console.log('MenuItems inserted');
     });
 
-    const optionSchema = new mongoose.Schema({
-        numeral: Number,
-        name: String,
-        menutype: String,
-        desciption: String,
-        smallPrice: String,
-        price: String,
-    });
+    // const optionSchema = new mongoose.Schema({
+    //     numeral: Number,
+    //     name: String,
+    //     menutype: String,
+    //     desciption: String,
+    //     smallPrice: String,
+    //     price: String,
+    // });
 
-    const Option = mongoose.model('Option', optionSchema);
+    // const Option = mongoose.model('Option', optionSchema);
 
     const initialOptionList = [
         new Option({ name: 'Lettuce', menuType: MenuType.SANDWICH, sortOrder: 1 }),

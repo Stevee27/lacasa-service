@@ -1,13 +1,12 @@
 
-// import * as mongodb from 'mongodb';
-// import UUID from 'uuid'
-
-import { MongoClient } from 'mongodb';
-import EventEmitter from 'events';
+import mongoose from 'mongoose';
 
 import dotenv from 'dotenv'
-const ENV_CONFIG = dotenv.config({ path: './.env' }).parsed;
+// import { Int32 } from 'mongodb';
 const DB_CONFIG = dotenv.config({ path: './.envdb' }).parsed;
+
+import EventEmitter from 'events';
+
 
 import express, { Router } from 'express';
 import StoreHours from "./dao/store-hours.js";
@@ -18,11 +17,13 @@ const emitter = new EventEmitter();
 let db;
 
 
-const runApp = async () => {
+const main = async () => {
 
     console.log("La Casa Started-->\n");
 
     try {
+        await mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
+        console.log('Mongoose connected (db lacasa)');
         const client = new MongoClient(DB_CONFIG.LACASA_ADM_URL);
         await client.connect();
         console.log('Connected to MongoDB');
@@ -34,7 +35,7 @@ const runApp = async () => {
         app.listen(45678);
     } catch (err) {
         console.error(err);
-    }  finally {
+    } finally {
         console.log('finally');
     }
 }

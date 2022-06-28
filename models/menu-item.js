@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
 const MenuItemSchema = new mongoose.Schema({
-    numeral: Number,
+    sortOrder: Number,
     name: String,
     menutype: String,
-    desciption: String,
+    description: String,
     smallPrice: String,
     price: String,
 })

@@ -82,151 +82,151 @@ const main = async () => {
 
     const menuItemArray = [
         new MenuItem({
-            numeral: 1,
+            sortOrder: 1,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Prosciutto, Fresh Mozzarella',
+            description: 'Prosciutto, Fresh Mozzarella',
             smallPrice: '10.99',
             price: '11.99'
         }),
         new MenuItem({
-            numeral: 2,
+            sortOrder: 2,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Ham, Salami, Provolone',
+            description: 'Ham, Salami, Provolone',
             smallPrice: '9.99',
             price: '10.99'
         }),
         new MenuItem({
-            numeral: 3,
+            sortOrder: 3,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Mortadella, Salami, Provolone',
+            description: 'Mortadella, Salami, Provolone',
             smallPrice: '9.99',
             price: '10.99'
         }),
         new MenuItem({
-            numeral: 4,
+            sortOrder: 4,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Turkey, Provolone',
+            description: 'Turkey, Provolone',
             smallPrice: '9.99',
             price: '10.99'
         }),
         new MenuItem({
-            numeral: 5,
+            sortOrder: 5,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Hot Capicola, Salami, Provolone',
+            description: 'Hot Capicola, Salami, Provolone',
             smallPrice: '9.99',
             price: '10.99'
         }),
         new MenuItem({
-            numeral: 6,
+            sortOrder: 6,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Fresh Mozzarella, Basil, Tomato',
+            description: 'Fresh Mozzarella, Basil, Tomato',
             smallPrice: '8.99',
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 7,
+            sortOrder: 7,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Speck, Mozzarella, Sun Dried Tomato, Pesto',
+            description: 'Speck, Mozzarella, Sun Dried Tomato, Pesto',
             smallPrice: '10.99',
             price: '11.99'
         }),
         new MenuItem({
-            numeral: 8,
+            sortOrder: 8,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Turkey, Arugula, Artichoke, Avocado',
+            description: 'Turkey, Arugula, Artichoke, Avocado',
             smallPrice: '10.99',
             price: '11.99'
         }),
         new MenuItem({
-            numeral: 9,
+            sortOrder: 9,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Pork, Turkey, Mayo, Mustard, Swiss, Pickle',
+            description: 'Pork, Turkey, Mayo, Mustard, Swiss, Pickle',
             smallPrice: '10.99',
             price: '11.99'
         }),
         new MenuItem({
-            numeral: 10,
+            sortOrder: 10,
             name: '',
             menutype: MenuType.SANDWICH,
-            desciption: 'Casa Special Sopressata, Arugula, Mozzarella, Tomato on Multigrain with House Sauce & Roasted Red Peppers',
+            description: 'Casa Special Sopressata, Arugula, Mozzarella, Tomato on Multigrain with House Sauce & Roasted Red Peppers',
             smallPrice: '10.99',
             price: '11.99'
         }),
         new MenuItem({
-            numeral: 15,
+            sortOrder: 15,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Cappuccino',
+            description: 'Cappuccino',
             smallPrice: '',
             price: '4.25'
         }),
         new MenuItem({
-            numeral: 16,
+            sortOrder: 16,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Latte',
+            description: 'Latte',
             smallPrice: '',
             price: '4.25'
         }),
         new MenuItem({
-            numeral: 17,
+            sortOrder: 17,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Espresso',
+            description: 'Espresso',
             smallPrice: '',
             price: '2.99'
         }),
         new MenuItem({
-            numeral: 18,
+            sortOrder: 18,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Espresso Macchiato',
+            description: 'Espresso Macchiato',
             smallPrice: '',
             price: '3.50'
         }),
         new MenuItem({
-            numeral: 19,
+            sortOrder: 19,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Double Cappuccino',
+            description: 'Double Cappuccino',
             smallPrice: '',
             price: '4.59'
         }),
         new MenuItem({
-            numeral: 20,
+            sortOrder: 20,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Hot/Iced Tea',
+            description: 'Hot/Iced Tea',
             smallPrice: '',
             price: '2.99'
         }),
         new MenuItem({
-            numeral: 21,
+            sortOrder: 21,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Hot Chocolate',
+            description: 'Hot Chocolate',
             smallPrice: '',
             price: '3.29'
         }),
         new MenuItem({
-            numeral: 22,
+            sortOrder: 22,
             name: '',
             menutype: MenuType.BEVERAGE,
-            desciption: 'Americano',
+            description: 'Americano',
             smallPrice: '',
             price: '2.99'
         }),
         new MenuItem({
-            numeral: 28,
+            sortOrder: 28,
             name: 'Sandwich',
             menutype: MenuType.BREAKFAST,
             description: 'Egg, Ham, Provolone on Toasted Roll or Croissant',
@@ -234,7 +234,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 29,
+            sortOrder: 29,
             name: 'Maddalena Special',
             menutype: MenuType.BREAKFAST,
             description: '2 Over Easy Eggs, Avocado, Basil, Mozzarella & Tomato on Choice of Bread',
@@ -242,7 +242,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 30,
+            sortOrder: 30,
             name: 'Eggs',
             menutype: MenuType.BREAKFAST,
             description: '2 Eggs on Toast with Fruit',
@@ -250,7 +250,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 31,
+            sortOrder: 31,
             name: 'Veggie Omelet',
             menutype: MenuType.BREAKFAST,
             description: '3 Eggs with Eggplant, Zucchini, Roasted Peppers & Mozzarella',
@@ -258,7 +258,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 32,
+            sortOrder: 32,
             name: 'Ham and Cheese',
             menutype: MenuType.BREAKFAST,
             description: '3 Eggs with Ham & Provolone',
@@ -266,7 +266,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 33,
+            sortOrder: 33,
             name: 'Cheese',
             menutype: MenuType.BREAKFAST,
             description: '3 Eggs with Provolone',
@@ -274,7 +274,7 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 34,
+            sortOrder: 34,
             name: 'Egg White Omelet',
             menutype: MenuType.BREAKFAST,
             description: 'Arugula, Tomato & Mozzarella',
@@ -282,202 +282,202 @@ const main = async () => {
             price: '9.99'
         }),
         new MenuItem({
-            numeral: 101,
+            sortOrder: 101,
             name: 'La Originale',
             menutype: MenuType.PIZZA,
-            desciption: 'Tomato Sauce, Mozzarella Cheese',
+            description: 'Tomato Sauce, Mozzarella Cheese',
             smallPrice: '13.99',
             price: '16.99'
         }),
         new MenuItem({
-            numeral: 102,
+            sortOrder: 102,
             name: 'Caprese',
             menutype: MenuType.PIZZA,
-            desciption: 'Fresh Tomato, Mozzarella, Basil',
+            description: 'Fresh Tomato, Mozzarella, Basil',
             smallPrice: '15.99',
             price: '19.99'
         }),
         new MenuItem({
-            numeral: 103,
+            sortOrder: 103,
             name: 'L\'Insalata di Pizza',
             menutype: MenuType.PIZZA,
-            desciption: 'Fresh Tomato, Mozzarella, Basil',
+            description: 'Fresh Tomato, Mozzarella, Basil',
             smallPrice: '15.99',
             price: '21.99'
         }),
         new MenuItem({
-            numeral: 104,
+            sortOrder: 104,
             name: 'La Diavola',
             menutype: MenuType.PIZZA,
-            desciption: 'Tomato Sauce, Mozzarella Cheese, Pepperoni',
+            description: 'Tomato Sauce, Mozzarella Cheese, Pepperoni',
             smallPrice: '16.99',
             price: '22.99'
         }),
         new MenuItem({
-            numeral: 105,
+            sortOrder: 105,
             name: ' La Salizz',
             menutype: MenuType.PIZZA,
-            desciption: 'Italian Sausage, Mozzarella, Tomato Sauce',
+            description: 'Italian Sausage, Mozzarella, Tomato Sauce',
             smallPrice: '16.99',
             price: '22.99'
         }),
         new MenuItem({
-            numeral: 106,
+            sortOrder: 106,
             name: 'Vegetarian',
             menutype: MenuType.PIZZA,
-            desciption: 'Mozzarella, Olives, Green Pepper, Mushroom, Artichoke',
+            description: 'Mozzarella, Olives, Green Pepper, Mushroom, Artichoke',
             smallPrice: '16.99',
             price: '22.99'
         }),
         new MenuItem({
-            numeral: 107,
+            sortOrder: 107,
             name: 'Anna Special',
             menutype: MenuType.PIZZA,
-            desciption: 'Turkey',
+            description: 'Turkey',
             smallPrice: '16.99',
             price: '22.99'
         }),
         new MenuItem({
-            numeral: 108,
+            sortOrder: 108,
             name: 'Pizza Alla Nutella',
             menutype: MenuType.PIZZA,
-            desciption: 'Turkey',
+            description: 'Turkey',
             smallPrice: '15.99',
             price: ''
         }),
         new MenuItem({
-            numeral: 109,
+            sortOrder: 109,
             name: 'Altamura',
             menutype: MenuType.PIZZA,
-            desciption: 'TuBresaola, Arugula, Mozzarella Cheese, Shaved Parigiano Cheese, Cherry Tomatorkey',
+            description: 'TuBresaola, Arugula, Mozzarella Cheese, Shaved Parigiano Cheese, Cherry Tomatorkey',
             smallPrice: '16.99',
             price: '23.99'
         }),
         new MenuItem({
-            numeral: 401,
+            sortOrder: 401,
             name: 'Antipasto Salad',
             menutype: MenuType.SALAD,
-            desciption: 'Mixed Lettuce with Grilled Eggplant, Zucchini, Artichoke, Roasted Peppers, Sun Dried Tomatoes and Mozzarella topped with Olive Oil and Balsamic Glaze',
+            description: 'Mixed Lettuce with Grilled Eggplant, Zucchini, Artichoke, Roasted Peppers, Sun Dried Tomatoes and Mozzarella topped with Olive Oil and Balsamic Glaze',
             smallPrice: '11.99',
             price: '15.99'
         }),
         new MenuItem({
-            numeral: 402,
+            sortOrder: 402,
             name: 'Italian Sushi',
             menutype: MenuType.SALAD,
-            desciption: 'Turkey, Artichoke, Zucchini,Eggplant, Fresh Tomato, Basil, Provolone or Fresh Mozzarella Rolled on a Bed of Mixed Lettuce',
+            description: 'Turkey, Artichoke, Zucchini,Eggplant, Fresh Tomato, Basil, Provolone or Fresh Mozzarella Rolled on a Bed of Mixed Lettuce',
             smallPrice: '11.99',
             price: '15.99'
         }),
         new MenuItem({
-            numeral: 403,
+            sortOrder: 403,
             name: 'Caprese Salad',
             menutype: MenuType.SALAD,
-            desciption: 'TuBrFresh Tomato and Mozzarella topped with Fresh Basil, Olive Oil, and Balsamic Glazeesaola',
+            description: 'TuBrFresh Tomato and Mozzarella topped with Fresh Basil, Olive Oil, and Balsamic Glazeesaola',
             smallPrice: '9.99',
             price: '13.99'
         }),
         new MenuItem({
-            numeral: 404,
+            sortOrder: 404,
             name: 'Bresalo (Cured Beef) Salad',
             menutype: MenuType.SALAD,
-            desciption: 'Bresalo over Arugula topped with Shaved Parmigiano Cheese, Lemon, black Pepper and Olive Oil',
+            description: 'Bresalo over Arugula topped with Shaved Parmigiano Cheese, Lemon, black Pepper and Olive Oil',
             smallPrice: '',
             price: '15.99'
         }),
         new MenuItem({
-            numeral: 501,
+            sortOrder: 501,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Chocolate Croissant',
+            description: 'Chocolate Croissant',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 502,
+            sortOrder: 502,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Strawberry & Cream Cheese Croissant',
+            description: 'Strawberry & Cream Cheese Croissant',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 503,
+            sortOrder: 503,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Cream Cheese Croissant',
+            description: 'Cream Cheese Croissant',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 504,
+            sortOrder: 504,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Plain Croissant',
+            description: 'Plain Croissant',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 505,
+            sortOrder: 505,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Creama Croissant',
+            description: 'Creama Croissant',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 506,
+            sortOrder: 506,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Muffins',
+            description: 'Muffins',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 507,
+            sortOrder: 507,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Sfogliatella (Ricotta & Citrus Fruit)',
+            description: 'Sfogliatella (Ricotta & Citrus Fruit)',
             smallPrice: '3.25',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 508,
+            sortOrder: 508,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Lobster Tail with Custard & Cream',
+            description: 'Lobster Tail with Custard & Cream',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 509,
+            sortOrder: 509,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Cannoli with Ricotta & Chocolate Chip',
+            description: 'Cannoli with Ricotta & Chocolate Chip',
             smallPrice: '3.25',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 510,
+            sortOrder: 510,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Chocolate Chip Cookie',
+            description: 'Chocolate Chip Cookie',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 511,
+            sortOrder: 511,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Cinnamon Bun',
+            description: 'Cinnamon Bun',
             smallPrice: '',
             price: '4.00'
         }),
         new MenuItem({
-            numeral: 512,
+            sortOrder: 512,
             name: '',
             menutype: MenuType.PASTRY,
-            desciption: 'Danish',
+            description: 'Danish',
             smallPrice: '',
             price: '4.00'
         }),
@@ -493,24 +493,24 @@ const main = async () => {
     });
 
     const initialOptionList = [
-        new Option({ name: 'Lettuce', menuType: MenuType.SANDWICH, sortOrder: 1 }),
-        new Option({ name: 'Tomato', menuType: MenuType.SANDWICH, sortOrder: 2 }),
-        new Option({ name: 'Oil', menuType: MenuType.SANDWICH, sortOrder: 3 }),
-        new Option({ name: 'Vinegar', menuType: MenuType.SANDWICH, sortOrder: 4 }),
-        new Option({ name: 'Arugula', menuType: MenuType.SANDWICH, sortOrder: 5 }),
-        new Option({ name: 'Roasted Pepper', menuType: MenuType.SANDWICH, sortOrder: 6 }),
-        new Option({ name: 'Extra Mozzarella', menuType: MenuType.SANDWICH, sortOrder: 10, price: '2.75' }),
-        new Option({ name: 'Fruitcup', menuType: MenuType.SANDWICH, sortOrder: 11, price: '4.95' }),
-        new Option({ name: 'Avocado', menuType: MenuType.SANDWICH, sortOrder: 12, price: '2.25' }),
-        new Option({ name: 'Heated', menuType: MenuType.SANDWICH, sortOrder: 22 }),
-        new Option({ name: 'Iced', menuType: MenuType.BEVERAGE, sortOrder: 1 }),
-        new Option({ name: 'Add Flavor', menuType: MenuType.BEVERAGE, sortOrder: 2 }),
-        new Option({ name: 'Almond Milk', menuType: MenuType.BEVERAGE, sortOrder: 20 }),
-        new Option({ name: 'Soy Milk', menuType: MenuType.BEVERAGE, sortOrder: 21 }),
-        new Option({ name: 'Coconut Milk', menuType: MenuType.BEVERAGE, sortOrder: 22 }),
-        new Option({ name: 'No Meat', menuType: MenuType.BREAKFAST, sortOrder: 1 }),
-        new Option({ name: 'No Cheese', menuType: MenuType.BREAKFAST, sortOrder: 2 }),
-        new Option({ name: 'No Eggs', menuType: MenuType.BREAKFAST, sortOrder: 3 }),
+        new Option({ name: 'Lettuce', menutype: MenuType.SANDWICH, sortOrder: 1 }),
+        new Option({ name: 'Tomato', menutype: MenuType.SANDWICH, sortOrder: 2 }),
+        new Option({ name: 'Oil', menutype: MenuType.SANDWICH, sortOrder: 3 }),
+        new Option({ name: 'Vinegar', menutype: MenuType.SANDWICH, sortOrder: 4 }),
+        new Option({ name: 'Arugula', menutype: MenuType.SANDWICH, sortOrder: 5 }),
+        new Option({ name: 'Roasted Pepper', menutype: MenuType.SANDWICH, sortOrder: 6 }),
+        new Option({ name: 'Extra Mozzarella', menutype: MenuType.SANDWICH, sortOrder: 10, price: '2.75' }),
+        new Option({ name: 'Fruitcup', menutype: MenuType.SANDWICH, sortOrder: 11, price: '4.95' }),
+        new Option({ name: 'Avocado', menutype: MenuType.SANDWICH, sortOrder: 12, price: '2.25' }),
+        new Option({ name: 'Heated', menutype: MenuType.SANDWICH, sortOrder: 22 }),
+        new Option({ name: 'Iced', menutype: MenuType.BEVERAGE, sortOrder: 1 }),
+        new Option({ name: 'Add Flavor', menutype: MenuType.BEVERAGE, sortOrder: 2 }),
+        new Option({ name: 'Almond Milk', menutype: MenuType.BEVERAGE, sortOrder: 20 }),
+        new Option({ name: 'Soy Milk', menutype: MenuType.BEVERAGE, sortOrder: 21 }),
+        new Option({ name: 'Coconut Milk', menutype: MenuType.BEVERAGE, sortOrder: 22 }),
+        new Option({ name: 'No Meat', menutype: MenuType.BREAKFAST, sortOrder: 1 }),
+        new Option({ name: 'No Cheese', menutype: MenuType.BREAKFAST, sortOrder: 2 }),
+        new Option({ name: 'No Eggs', menutype: MenuType.BREAKFAST, sortOrder: 3 }),
     ];
 
     Option.insertMany(initialOptionList, function (err) {

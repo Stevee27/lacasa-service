@@ -7,6 +7,17 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Graphql",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/gql-service.js",
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "load mongo",
             "runtimeExecutable": "nodemon",
             "program": "${workspaceFolder}/mongo-load.js",

@@ -5,7 +5,7 @@ const OptionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    menuType: {
+    menutype: {
         type: String,
         required: true
     },

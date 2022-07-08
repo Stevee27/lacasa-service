@@ -7,6 +7,8 @@ const DB_CONFIG = dotenv.config({ path: './.envdb' }).parsed;
 import StoreHours from './models/storehours.js';
 import MenuItem from './models/menu-item.js';
 import Option from './models/option.js';
+import Authentication from './models/authentication.js';
+import User from './models/user.js';
 
 const main = async () => {
     await mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
@@ -17,48 +19,94 @@ const main = async () => {
         return;
     }
 
+    const authArray = [
+        new Authentication({
+            username: 'steve',
+            passwd: 'asd',
+        }),
+        new Authentication({
+            username: 'anna',
+            passwd: 'asd',
+        }),
+    ]
+
+    const someUsers = [
+        new User({
+            username: 'steve',
+            firstName: 'Steve',
+            lastName: 'Messing',
+            roles: 'A',
+            email: 'steve@lacasadelpane.us'
+        }),
+        new User({
+            username: 'anna',
+            firstName: 'Anna',
+            lastName: 'Clemens',
+            roles: 'A',
+            email: 'anna@lacasadelpane.us'
+        }),
+    ];
+
+    Authentication.insertMany(authArray, function (err) {
+        if (err) {
+            console.log('Have an insertMany error:')
+            console.log(err);
+            return;
+        }
+        console.log('Auths inserted');
+    })
+
+    User.insertMany(someUsers, function (err) {
+        if (err) {
+            console.log('Have an insertMany error:')
+            console.log(err);
+            return;
+        }
+        console.log('Users inserted');
+    })
+
     const storeHoursArray = [
         new StoreHours({
             order: 1,
-            day: 'Monday',
-            from: -1,
-            to: -1,
+            dayOfWeek: 'Monday',
+            from: 'Closed',
+            to: 'Closed',
         }),
         new StoreHours({
             order: 2,
-            day: 'Tuesday',
-            from: 800,
-            to: 1500,
+            dayOfWeek: 'Tuesday',
+            from: '8:00 AM',
+            to: '3:00 PM',
         }),
         new StoreHours({
             order: 3,
-            day: 'Wednesday',
-            from: 800,
-            to: 1500,
+            dayOfWeek: 'Wednesday',
+            from: '8:00 AM',
+            to: '3:00 PM',
         }),
         new StoreHours({
             order: 4,
-            day: 'Thursday',
-            from: 800,
-            to: 1500,
+            dayOfWeek: 'Thursday',
+            from: '8:00 AM',
+            to: '3:00 PM',
         }),
         new StoreHours({
             order: 5,
-            day: 'Friday',
-            from: 800,
-            to: 1500,
+            dayOfWeek: 'Friday',
+            from: '8:00 AM',
+            to: '3:00 PM',
         }),
         new StoreHours({
             order: 6,
-            day: 'Saturday',
-            from: 800,
-            to: 1700,
+            dayOfWeek: 'Saturday',
+            from: '8:00 AM',
+            to: '5:00 PM',
         }),
         new StoreHours({
             order: 7,
-            day: 'Sunday',
-            from: 800,
-            to: 1400,
+            dayOfWeek: 'Sunday',
+            from: '8:00 AM',
+            to: '2:00 PM',
         }),
     ]
 

@@ -17,9 +17,9 @@ const StoreHoursType = new GraphQLObjectType({
     name: 'StoreHours',
     fields: () => ({
         order: { type: GraphQLInt },
-        day: { type: GraphQLString },
-        from: { type: GraphQLInt },
-        to: { type: GraphQLInt },
+        dayOfWeek: { type: GraphQLString },
+        from: { type: GraphQLString },
+        to: { type: GraphQLString },
     })
 })
 

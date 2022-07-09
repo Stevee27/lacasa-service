@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 import dotenv from 'dotenv'
 // import { Int32 } from 'mongodb';
@@ -10,6 +11,8 @@ import Option from './models/option.js';
 import Authentication from './models/authentication.js';
 import User from './models/user.js';
 
+const SALT = "$2a$10$Mr5Swe0k8xdQ/oIAwgHsGO"
+
 const main = async () => {
     await mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
     console.log('Mongoose connected (db lacasa)');
@@ -19,14 +22,12 @@ const main = async () => {
         return;
     }
 
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash('asd', SALT);
     const authArray = [
         new Authentication({
             username: 'steve',
-            passwd: 'asd',
-        }),
-        new Authentication({
-            username: 'anna',
-            passwd: 'asd',
+            passwd: hashedPassword,
         }),
     ]
 
@@ -38,13 +39,13 @@ const main = async () => {
             roles: 'A',
             email: 'steve@lacasadelpane.us'
         }),
-        new User({
-            username: 'anna',
-            firstName: 'Anna',
-            lastName: 'Clemens',
-            roles: 'A',
-            email: 'anna@lacasadelpane.us'
-        }),
+        // new User({
+        //     username: 'anna',
+        //     firstName: 'Anna',
+        //     lastName: 'Clemens',
+        //     roles: 'A',
+        //     email: 'anna@lacasadelpane.us'
+        // }),
     ];
 
     Authentication.insertMany(authArray, function (err) {

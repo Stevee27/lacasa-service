@@ -11,7 +11,6 @@ import Option from './models/option.js';
 import Authentication from './models/authentication.js';
 import User from './models/user.js';
 
-const SALT = "$2a$10$Mr5Swe0k8xdQ/oIAwgHsGO"
 
 const main = async () => {
     await mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
@@ -23,7 +22,7 @@ const main = async () => {
     }
 
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash('asd', SALT);
+    const hashedPassword = await bcrypt.hash('Latte', salt);
     const authArray = [
         new Authentication({
             username: 'steve',

@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv'
 const CONFIG = dotenv.config({ path: './.env' }).parsed;
 const DB_CONFIG = dotenv.config({ path: './.envdb' }).parsed;
@@ -8,11 +10,12 @@ import { graphqlHTTP } from 'express-graphql';
 import schema from './schema/schema.js'
 
 import StoreHours from './models/storehours.js';
+import Authentication from './models/authentication.js'
 
 const app = express()
 // const api = Router()
 
-const SALT = "$2a$10$Mr5Swe0k8xdQ/oIAwgHsGO"
+console.log(CONFIG.TOKEN_SECRET);
 
 mongoose.connect(DB_CONFIG.LACASA_ADM_URL);
 mongoose.connection.once('open', async () => {
@@ -25,11 +28,21 @@ mongoose.connection.once('open', async () => {
         schema,
         graphiql: true
     }))
-    app.post('/login', urlencoded(), (req, res) => {
+    app.post('/login', urlencoded(), async (req, res) => {
         const username = req.body.username;
         const passwd = req.body.password
         console.log(username, passwd);
-        res.send("OK");
+        const authentication = await Authentication.findOne({ name: username }).exec();
+        var validLogin = await bcrypt.compare(passwd, authentication.passwd);
+        if (validLogin) {
+            var user = { username: username }
+            var accessToken = jwt.sign(JSON.stringify(user), CONFIG.TOKEN_SECRET);
+            res.json({ accessToken: accessToken });
+        } else {
+            res.status(401);
+            res.json({ message: "Invalid Credentials" });
+        }
+
     });
     app.listen(CONFIG.WS_LACASA_PORT, () => {
         console.log(`Listening on port ${CONFIG.WS_LACASA_PORT}`);

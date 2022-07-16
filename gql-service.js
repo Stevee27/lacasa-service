@@ -37,8 +37,6 @@ mongoose.connection.once('open', async () => {
         var validLogin = await bcrypt.compare(passwd, authentication.passwd);
         if (validLogin) {
             var user = await User.findOne({ username: username }).select({ firstName: 1, email: 1, _id: 0 });
-
-            // var user = { username: username }
             var accessToken = jwt.sign(JSON.stringify(user), CONFIG.TOKEN_SECRET);
             res.json({ accessToken: accessToken });
         } else {

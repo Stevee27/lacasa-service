@@ -11,6 +11,7 @@ import schema from './schema/schema.js'
 
 import StoreHours from './models/storehours.js';
 import Authentication from './models/authentication.js'
+import User from './models/user.js'
 
 const app = express()
 // const api = Router()
@@ -35,7 +36,9 @@ mongoose.connection.once('open', async () => {
         const authentication = await Authentication.findOne({ name: username }).exec();
         var validLogin = await bcrypt.compare(passwd, authentication.passwd);
         if (validLogin) {
-            var user = { username: username }
+            var user = await User.findOne({ username: username }).select({ firstName: 1, email: 1, _id: 0 });
+
+            // var user = { username: username }
             var accessToken = jwt.sign(JSON.stringify(user), CONFIG.TOKEN_SECRET);
             res.json({ accessToken: accessToken });
         } else {
